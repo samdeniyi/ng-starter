@@ -4,6 +4,8 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarModule } from 'ng-sidebar';
+import { FormsModule } from '@angular/forms';
 
 import { ShellComponent } from './shell/shell.component';
 import { HeaderComponent } from './shell/header/header.component';
@@ -20,10 +22,12 @@ import { CacheInterceptor } from './http/cache.interceptor';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     HttpClientModule,
     TranslateModule,
     NgbModule,
-    RouterModule
+    RouterModule,
+    SidebarModule.forRoot()
   ],
   declarations: [
     HeaderComponent,

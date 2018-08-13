@@ -30,6 +30,10 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/fonts/linea/styles.css",
+              "src/assets/fonts/header/_flaticon.scss",
+              "src/assets/fonts/data-table/icons.css",
+              "src/assets/styles/app.scss",
               "src/main.scss"
             ],
             "scripts": []

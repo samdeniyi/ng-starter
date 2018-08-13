@@ -17,6 +17,7 @@
     "generate": "ng generate"
   },
   "dependencies": {
+    "@angular-devkit/core": "^0.7.2",
     "@angular/animations": "^6.0.1",
     "@angular/common": "^6.0.1",
     "@angular/compiler": "^6.0.1",
@@ -26,13 +27,14 @@
     "@angular/platform-browser": "^6.0.1",
     "@angular/platform-browser-dynamic": "^6.0.1",
     "@angular/router": "^6.0.1",
-    "@ngx-translate/core": "^10.0.1",
     "@angular/service-worker": "^6.0.1",
-    "@ng-bootstrap/ng-bootstrap": "^2.0.0",
-    "bootstrap": "^4.1.1",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-    "core-js": "^2.5.6",
+    "@ng-bootstrap/ng-bootstrap": "^2.0.0",
+    "@ngx-translate/core": "^10.0.1",
+    "bootstrap": "^4.1.1",
+    "core-js": "2.5.1",
     "lodash": "^4.17.10",
+    "ng-sidebar": "^8.0.0",
     "rxjs": "^6.1.0",
     "zone.js": "^0.8.26"
   },
