@@ -10,8 +10,7 @@
       [sidebarClass]="'sidebar-panel'" #sidebar>
       <nav class="navbar custom-navbar main-brand">
         <a class="navbar-brand mr-auto" [routerLink]="['/']">
-          <img src="assets/images/logo.png" class="navbar-brand-logo" alt="">
-          <span class="docked-hidden">&nbsp;Decima</span>
+          <img src="assets/images/logo-purple.png" class="navbar-brand-logo" alt="">
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -26,25 +25,53 @@
       <!-- main navigation -->
       <nav class="menu">
         <ul class="navigation" appAccordion>
-          <li class="navigation-item" appAccordionLink group="email">
-            <a class="navigation-link" appAccordionToggle [routerLink]="['/', 'email']">
-              <i class="icon icon-basic-paperplane"></i>
-              <span>Home</span>
+          <li class="navigation-item active" routerLinkActive="active" appAccordionLink group="dashboard">
+            <a class="navigation-link active" appAccordionToggle [routerLink]="['/', 'dashboard']">
+              <i class="icon icon-basic-book"></i>
+              <span>Dashboard</span>
               <span class="mr-auto"></span>
-              <span class="badge badge-sub">5</span>
-            </a>
-            <a class="navigation-link" appAccordionToggle href="#">
-              <i class="icon icon-basic-home"></i>
-              <span>Home</span>
-              <span class="mr-auto"></span>
-              <span class="badge badge-sub">5</span>
             </a>
           </li>
-          <li class="navigation-item"><hr class="mt-0 mb-0" /></li>
-          <li class="navigation-item">
-            <a class="navigation-link" (click)="addMenuItem()">
-              <i class="icon icon-basic-add"></i>
-              <span>Add</span>
+          <li class="navigation-item" appAccordionLink group="transactions">
+            <a class="navigation-link" appAccordionToggle [routerLink]="['/', 'transactions']">
+              <i class="icon icon-ecommerce-graph2"></i>
+              <span>Transactions</span>
+              <span class="mr-auto"></span>
+            </a>
+          </li>
+          <li class="navigation-item" appAccordionLink group="customerManagement">
+            <a class="navigation-link" appAccordionToggle [routerLink]="['/', 'customerManagement']">
+              <i class="icon fas fa-users"></i>
+              <span>Customer Management</span>
+              <span class="mr-auto"></span>
+            </a>
+          </li>
+          <li class="navigation-item" appAccordionLink group="userManagement">
+            <a class="navigation-link" appAccordionToggle [routerLink]="['/', 'userManagement']">
+              <i class="icon far fa-user"></i>
+              <span>User Management</span>
+              <span class="mr-auto"></span>
+            </a>
+          </li>
+          <li class="navigation-item" appAccordionLink group="roleManagement">
+            <a class="navigation-link" appAccordionToggle [routerLink]="['/', 'roleManagement']">
+              <i class="icon fas fa-tag"></i>
+              <span>Role Management</span>
+              <span class="mr-auto"></span>
+            </a>
+          </li>
+          <li class="navigation-item" appAccordionLink group="rolePermission">
+            <a class="navigation-link" appAccordionToggle [routerLink]="['/', 'rolePermission']">
+              <i class="icon icon-basic-link"></i>
+              <span>Role Permission</span>
+              <span class="mr-auto"></span>
+            </a>
+          </li>
+          <li class="navigation-item" appAccordionLink group="rolePermission">
+            <a class="navigation-link" appAccordionToggle [routerLink]="['/', 'rolePermission']">
+              <i class="icon fa fa-cog"></i>
+              <span>Settings</span>
+              <span class="mr-auto"></span>
             </a>
           </li>
         </ul>
@@ -68,6 +95,7 @@
         <ul class="navbar-nav">
           <li class="nav-item" ngbDropdown placement="bottom-right">
             <a href="javascript:;" class="nav-link" ngbDropdownToggle>
+              <small class="text-muted username">Sam Adeniyi</small>
               <img src="assets/images/avatar.jpg" class="navbar-avatar rounded-circle" alt="user" title="user">
             </a>
             <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
@@ -89,50 +117,7 @@
                 <span>Signout</span>
               </a>
             </div>
-          </li>
-          <li class="nav-item" ngbDropdown placement="bottom-right">
-            <a href="javascript:;" class="nav-link" ngbDropdownToggle>
-              <i class="fi flaticon-notification"></i>
-              <span class="badge badge-danger">4</span>
-            </a>
-            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right notifications">
-              <div class="notifications-wrapper">
-                <a href="javascript:;" class="dropdown-item">
-                  <span class="badge badge-warning">NEW</span>
-                  &nbsp;Sean launched a new application
-                  <span class="time">2 seconds ago</span>
-                </a>
-                <a href="javascript:;" class="dropdown-item">
-                  Removed calendar from app list
-                  <span class="time">4 hours ago</span>
-                </a>
-                <a href="javascript:;" class="dropdown-item">
-                  Jack Hunt has joined mailing list
-                  <span class="time">9 days ago</span>
-                </a>
-                <a href="javascript:;" class="dropdown-item">
-                  <span class="text-muted">Conan Johns created a new list</span>
-                  <span class="time">9 days ago</span>
-                </a>
-              </div>
-              <div class="notification-footer">Notifications</div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:;" class="nav-link" appToggleFullscreen>
-              <i class="fi flaticon-fullscreen"></i>
-            </a>
-          </li>
-  
-          <li class="nav-item">
-            <span class="nav-divider"></span>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:;" class="nav-link" (click)="openSearch(search)">
-              <i class="fi flaticon-search"></i>
-            </a>
-          </li>
-  
+          </li>  
         </ul>
       </nav>
   
@@ -156,18 +141,3 @@
     </div>
   
   </ng-sidebar-container>
-  
-  <ng-template #search let-c="close" let-d="dismiss">
-    <form class="search__form" action="">
-      <input class="search-input" name="search" type="search" placeholder="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus="true" />
-      <p class="text-muted"><small><strong>Hit enter to search or ESC to close</strong></small></p>
-    </form>
-    <div class="search-suggestions">
-      <h6 class="text-uppercase"><strong>Suggestions?</strong></h6>
-      <p class="text-primary">#medical #analytics #fitness #transport #ui #dashboard #admin #bootstrap #angular #typescript</p>
-    </div>
-    <button type="button" class="search-close" aria-label="Close search form" (click)="d('Cross click')">
-      <i class="fi flaticon-close"></i>
-    </button>
-  </ng-template>
-  

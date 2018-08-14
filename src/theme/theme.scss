@@ -3,3 +3,39 @@
  * Framework overrides and customization goes here.
  */
 
+ .sidebar-panel.ng-sidebar {
+    background: #fff !important;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mode-push .app-inner {
+    margin-left: 12rem !important;
+}
+
+.app ng-sidebar > .sidebar-panel.ng-sidebar {
+    width: 12rem;
+
+    .menu {
+        min-width: 12rem;
+    }
+}
+
+.theme-light .sidebar-panel.ng-sidebar .navigation-link{
+    color: rgb(30, 31, 31);
+    font-size: .7rem;
+
+    &:hover{
+        color: #333;
+        text-decoration: none;
+    }
+
+    .icon {
+        margin-right: 0rem !important;
+        font-size: .6rem !important;
+    }
+
+    .far, .fas, .fa {
+        width: 20px;
+        text-align: center;
+    }
+}

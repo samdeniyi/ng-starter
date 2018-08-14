@@ -62,7 +62,7 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void  {
-    setTimeout(_ => this.runOnRouteChange());
+     setTimeout(_ => this.runOnRouteChange());
   }
 
   ngOnDestroy() {
