@@ -13,6 +13,8 @@ import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import {TransactionsModule} from '@app/transactions/transactions.module';
 
 @NgModule({
   imports: [
@@ -26,7 +28,9 @@ import { AppRoutingModule } from './app-routing.module';
     SharedModule,
     HomeModule,
     LoginModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DashboardModule,
+    TransactionsModule
   ],
   declarations: [AppComponent],
   providers: [

@@ -12,5 +12,11 @@
   "Username is required": "Identifiant requis",
   "Username or password incorrect.": "Identifiant ou mot de passe incorrect.",
   "Remember me": "Rester connecté",
-  "Version": "Version"
+  "Version": "Version",
+  "Dashboard" : "fr_Dashboard",
+  "Transactions" : "fr_Transactions",
+  "Customers" : "fr_Customers",
+  "Error, could not load joke": "FR_Error, could not load joke :-(",
+  "Users": "FR_Users",
+  "Settings":"FR_Settings"
 }

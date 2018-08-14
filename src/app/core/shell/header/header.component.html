@@ -15,6 +15,41 @@
           <i class="fas fa-question-circle"></i>
           <span translate>About</span>
         </a>
+        <a class="nav-item nav-link text-uppercase" routerLink="/dashboard" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i>
+          <span translate>Dashboard</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase" routerLink="/transactions" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i>
+          <span translate>Transactions</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase" routerLink="/customers" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i>
+          <span translate>Customers</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase" routerLink="/users" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i>
+          <span translate>Users</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase" routerLink="/settings" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i>
+          <span translate>Settings</span>
+        </a>
+        <div class="nav-item" ngbDropdown placement="bottom-right">
+          <a class="nav-link text-uppercase" ngbDropdownToggle>
+            <i class="fas fa-user-circle"></i> <span translate>Settings</span>
+          </a>
+          <div ngbDropdownMenu aria-labelledby="user-dropdown">
+            <!--<h6 class="dropdown-header">-->
+              <!--<span translate>Logged in as</span> <b>{{username}}</b></h6>-->
+            <!--<div class="dropdown-divider"></div>-->
+            <!--<button class="dropdown-item" (click)="logout()" translate>Logout</button>-->
+            <a class="nav-item nav-link text-uppercase text-black-50"
+               routerLink="/settings/rates" routerLinkActive="active">
+              <span translate>Settings</span>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="navbar-nav ml-auto">
         <div class="nav-item" ngbDropdown placement="bottom-right">

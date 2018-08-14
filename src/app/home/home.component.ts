@@ -10,6 +10,7 @@ import { QuoteService } from './quote.service';
 })
 export class HomeComponent implements OnInit {
 
+  quotes: string;
   quote: string;
   isLoading: boolean;
 
@@ -19,7 +20,9 @@ export class HomeComponent implements OnInit {
     this.isLoading = true;
     this.quoteService.getRandomQuote({ category: 'dev' })
       .pipe(finalize(() => { this.isLoading = false; }))
-      .subscribe((quote: string) => { this.quote = quote; });
+      .subscribe((quote: string) => { this.quotes = quote;
+      console.log('quoteService: ', quote);
+      });
   }
 
 }
